@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lanjutan - Elemen semantik</title>
+    <link rel="stylesheet" href="style.css">
+<head>
+<body>
+    <header>
+        <h1>Selemat datang di web HTML5 Semantik</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <article>
+                <h2>Artikel Pertama</h2>
+                <p>ini adalah contoh elemen <code>&it;article&gt;</code> di HTML5.</p>
+            </article>
+
+            <article>
+                <h2>Artikel Kedua</h2>
+                <p>Elemen semantik membantu struktur halaman web lebih jelas.</p>
+            </article>
+        </section>
+
+        <!-- <section>
+            <h2>Formulir Kontak</h2>
+            <form action="#" method="POST">
+                <label for="name">Nama:</label>
+                <input type="text" id="name"  name="name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Kirim</button>
+            </form>
+        <section> -->
+
+        <section>
+            <form action="#" method="POST" aria-labelledby="form-heading">
+                <h2 id="form-heading">Formulir Kontak</h2>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required aria-required="true">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email anda" required aria-required="true">
+
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan Anda" required aria-required="true"></textarea>
+
+                <button type="submit" aria-label="Kirim Formulir">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Praktikum Web</p>
+    </footer>
+</body>
+</html>
